@@ -74,7 +74,7 @@ axios.request(config)
 ```
 
 #### Response Field Details
-**Result**: An array containing hotel records returned by the API.
+**Result**: An array containing hotel/property records returned by the API.
   - `id`: The internal identifier for this hotel record.
   - `state`: The state or province where the hotel is located.
   - `address`: The full street address of the hotel.
@@ -168,7 +168,7 @@ axios.request(config)
 ```
 
 #### Response Field Details
-**Result**: An object containing hotel records returned by the API.
+**Result**: An object containing hotel/property record returned by the API.
   - `id`: Internal identifier for this property record in your system.
   - `property_id`: Unique property ID assigned by Channex.
   - `state`: The state or province where the property is located.
@@ -254,7 +254,7 @@ axios.request(config)
 ```
 
 #### Response Field Details
-**Result**: An object containing hotel records returned by the API.
+**Result**: An object containing hotel/property records returned by the API.
   - `name`: The display name of the property or group of properties.
   - `code`: The unique code representing the property.
   - `currency_code`: The currency code associated with the property (ISO 4217 format).
@@ -627,7 +627,7 @@ axios.request(config)
 
 Delete a property.
 
-**Endpoint:** `DELETE /DeleteProperties`
+**Endpoint:** `DELETE /DeleteProperties/{hotel_code}`
 
 **Parameters:**
 - `hotel_code`: Hotel code to delete
