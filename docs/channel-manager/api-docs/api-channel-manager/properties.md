@@ -558,7 +558,6 @@ Update a property.
   - **"0"** → through another system
 - `emails`: A list of email addresses used by the hotel to receive notifications.
 
-
 ---
 
 **Example Request:**
@@ -592,7 +591,7 @@ let data = JSON.stringify({
 });
 
 let config = {
-  method: 'post',
+  method: 'put',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateProperties',
   headers: {

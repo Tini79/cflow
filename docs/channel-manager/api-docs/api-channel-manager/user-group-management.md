@@ -188,7 +188,7 @@ axios.request(config)
 
 Update a user group in the system.
 
-**Endpoint:** `POST /UpdateUserGroup`
+**Endpoint:** `PUT /UpdateUserGroup`
 
 **Request Body:**
 
@@ -215,7 +215,7 @@ let data = JSON.stringify({
 });
 
 let config = {
-  method: 'post',
+  method: 'put',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateUserGroup',
   headers: {

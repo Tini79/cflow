@@ -1,7 +1,7 @@
 ---
 title: API Internal Rate Plan
 description: Complete API reference for managing Internal Rate Plan through CRUD operations
-sidebar_position: 11
+sidebar_position: 12
 ---
 
 # Internal Rate Plan API Endpoints
@@ -29,7 +29,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetInternalRatePlanList'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetInternalRatePlanList/CKR'
 };
 
 axios.request(config)
@@ -266,7 +266,7 @@ let data = JSON.stringify({
 let config = {
   method: 'post',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/InsertInternalRatePlan',
+  url: 'https://cm.cakrasoft.net/cm/api/v2/InsertInternalRatePlan/CKR',
   headers: {
     'Content-Type': 'application/json',
     'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
@@ -299,7 +299,7 @@ axios.request(config)
 
 Update a internal rate plan in the system.
 
-**Endpoint:** `POST /UpdateInternalRatePlan/{id}`
+**Endpoint:** `PUT /UpdateInternalRatePlan/{id}`
 
 **Parameters:**
 - `id`: Internal rate plan id
@@ -350,9 +350,9 @@ let data = JSON.stringify({
 });
 
 let config = {
-  method: 'post',
+  method: 'put',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateInternalRatePlan',
+  url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateInternalRatePlan/1',
   headers: {
     'Content-Type': 'application/json',
     'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
@@ -381,7 +381,7 @@ axios.request(config)
 }
 ```
 
-## 5. Delete Internal Rate Plan
+## 6. Delete Internal Rate Plan
 
 Delete a internal rate plan.
 

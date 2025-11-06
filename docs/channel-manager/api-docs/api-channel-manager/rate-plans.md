@@ -429,7 +429,7 @@ let data = JSON.stringify({
 });
 
 let config = {
-  method: 'post',
+  method: 'put',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateRatePlan',
   headers: {

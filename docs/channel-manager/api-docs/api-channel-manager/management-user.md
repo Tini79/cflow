@@ -182,9 +182,9 @@ axios.request(config)
 
 ## 4. Create User API
 
-Register a new user account in the system.
+Create a new user account in the system.
 
-**Endpoint:** `POST /Register`
+**Endpoint:** `POST /InsertUser`
 
 **Request Body:**
 
@@ -227,7 +227,7 @@ let data = JSON.stringify({
 let config = {
   method: 'post',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/Register',
+  url: 'https://cm.cakrasoft.net/cm/api/v2/InsertUser',
   headers: {
     'Content-Type': 'application/json',
     'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
@@ -260,7 +260,7 @@ axios.request(config)
 
 Update a user account in the system.
 
-**Endpoint:** `POST /UpdateUser`
+**Endpoint:** `PUT /UpdateUser`
 
 **Request Body:**
 
@@ -301,7 +301,7 @@ let data = JSON.stringify({
 });
 
 let config = {
-  method: 'post',
+  method: 'put',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateUser',
   headers: {
@@ -332,7 +332,71 @@ axios.request(config)
 }
 ```
 
-## 6. Delete User
+## 6. Activate/Deactivate User API
+
+Update a user active status in the system.
+
+**Endpoint:** `PUT /UpdateIsActive`
+
+**Request Body:**
+
+```json
+{
+  "username": "marketing",
+  "is_active": 1,
+}
+```
+
+#### Request Body Field Details
+- `code`: The unique user identifier or username.
+- `is_active`: Numeric flag indicating whether the account is active.
+  - **1** = active/enabled
+  - **0** = inactive/disabled.
+---
+
+**Example Request:**
+
+```javascript
+const axios = require('axios');
+
+let data = JSON.stringify({
+  "code": "marketing",
+  "is_active": 1,
+});
+
+let config = {
+  method: 'put',
+  maxBodyLength: Infinity,
+  url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateIsActive',
+  headers: {
+    'Content-Type': 'application/json',
+    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  },
+  data : data
+};
+
+axios.request(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+---
+
+**Example Response:**
+
+```json
+{
+  "StatusCode": 0,
+  "Message": "Success",
+  "Result": null
+}
+```
+
+## 7. Delete User
 
 Delete a user.
 

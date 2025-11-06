@@ -169,7 +169,7 @@ axios.request(config)
 
 ## 3. Save and Acknoledge Booking API
 
-Register a new user account in the system.
+Saving the booking to the Channel Manager (CM) and PMS, including acknowledgment for bookings successfully received by the PMS.
 
 **Endpoint:** `POST /ReservationNotif`
 
@@ -200,6 +200,151 @@ let config = {
   method: 'post',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/ReservationNotif',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Basic <base64(username:password)>'
+  },
+  data : data
+};
+
+axios.request(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+**Example Response:**
+
+```json
+{
+  "StatusCode": 0,
+  "Message": "Success",
+  "Result": null
+}
+```
+
+## 4. Resend Booking API
+
+Resending the booking to the PMS if it failed or has not yet been delivered.
+
+**Endpoint:** `POST /ResendBooking`
+
+**Request Body:**
+
+```json
+{
+  "hotel_code": "CKR",
+  "booking_id": "3626a0a9-6e11-443b-aa32-152d7fdd2853",
+  "revision_id": "ef0fc39b-90ee-4306-be7d-99e0f939c38a"
+}
+```
+
+#### Request Body Field Details
+- `hotel_code`: The unique identifier of the hotel where the booking belongs.
+- `booking_id`: The booking reference number received from the Channel Manager or OTA.
+- `revision_id`: The revision number of the booking, used to track updates or modifications to the reservation.
+
+**Example Request:**
+
+```javascript
+const axios = require('axios');
+
+let data = JSON.stringify({
+  "hotel_code": "CKR",
+  "booking_id": "3626a0a9-6e11-443b-aa32-152d7fdd2853",
+  "revision_id": "ef0fc39b-90ee-4306-be7d-99e0f939c38a"
+});
+
+let config = {
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: 'https://cm.cakrasoft.net/cm/api/v2/ResendBooking',
+  headers: {
+    'Content-Type': 'application/json',
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  },
+  data : data
+};
+
+axios.request(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+**Example Response:**
+
+```json
+{
+  "StatusCode": 0,
+  "Message": "Success",
+  "Result": null
+}
+```
+
+## 5. Read Booking Webhook API
+
+This API serves as the booking webhook endpoint used by Channex to send reservation data to the Cakrahub Channel Manager. Whenever a new booking or booking update occurs, Channex pushes the booking payload to this endpoint so Cakrahub can process, store, and synchronize the reservation with the PMS.
+
+**Endpoint:** `POST /ReadBookingWebhook`
+
+**Query Parameters:**
+- `HotelCode`: Hotel code
+
+**Request Body:**
+
+```json
+{
+  "event": "booking",
+  "payload": {
+    "booking_id": "fbb30008-8050-41a2-afbb-7ba3acc2acc8",
+    "property_id": "7c9fd297-9e1c-422f-857b-93495ff25425",
+    "revision_id": "ebc775e7-b140-473a-8380-dbe41b8f3c95"
+  },
+  "property_id": "7c9fd297-9e1c-422f-857b-93495ff25425",
+  "user_id": 1024,
+  "timestamp": "2025-02-14T10:22:45Z"
+}
+```
+
+#### Request Body Field Details
+- `event`: The type of webhook event sent by Channex.
+- `payload`: The booking data included in the webhook, containing booking and revision identifiers.
+  - `booking_id`: The unique booking identifier assigned by Channex.
+  - `property_id`: The property ID associated with the booking, matching the property in Channex.
+  - `revision_id`: The revision number for the booking, representing changes or updates made to the reservation.
+- `property_id`: The unique property ID in Channex associated with the booking.
+- `user_id`: The ID of the user or integration sender triggering the webhook. May be null or various types depending on Channex’s structure.
+- `timestamp`: The ISO 8601 timestamp indicating when the webhook event was generated.
+
+**Example Request:**
+
+```javascript
+const axios = require('axios');
+
+let data = JSON.stringify({
+  "event": "booking",
+  "payload": {
+    "booking_id": "fbb30008-8050-41a2-afbb-7ba3acc2acc8",
+    "property_id": "7c9fd297-9e1c-422f-857b-93495ff25425",
+    "revision_id": "ebc775e7-b140-473a-8380-dbe41b8f3c95"
+  },
+  "property_id": "7c9fd297-9e1c-422f-857b-93495ff25425",
+  "user_id": 1024,
+  "timestamp": "2025-02-14T10:22:45Z"
+}
+);
+
+let config = {
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: 'https://cm.cakrasoft.net/cm/api/v2/ReadBookingWebhook',
   headers: {
     'Content-Type': 'application/json',
     'Authorization': 'Basic <base64(username:password)>'
