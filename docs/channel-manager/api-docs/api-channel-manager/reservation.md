@@ -40,6 +40,9 @@ axios.request(config)
     - `meta`: Metadata associated with the booking.
         - `ruid`: Unique record identifier.
     - `status`: Current status of the booking.
+      - **new**: New booking
+      - **modified**: Modified booking
+      - **cancelled**: Cancelled booking
     - `services`: Array of additional services associated with the booking.
     - `currency`: Currency code for amounts.
     - `amount`: Total amount of the booking in the specified currency.
@@ -73,6 +76,9 @@ axios.request(config)
     - `rooms`: Array of room details associated with this booking.
       - `internal_room_id`: Internal system ID for the room.
       - `booking_status`: Status of the room booking.
+        - **New**: New booking
+        - **Modify**: Modified booking
+        - **Cancelled**: Cancelled booking
       - `booking_id`: ID of the booking this room belongs to.
       - `meta` RoomMeta: Metadata about the room record .
       - `taxes`: Array of taxes applied to this room.

@@ -26,7 +26,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRatePlansList?HotelCode=CKR&PageNumber=1'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRatePlansList?HotelCode=CKR&PageNumber=1',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -123,7 +123,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRatePlan/CKR/JOYQ/HM'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRatePlan/CKR/JOYQ/HM',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -216,7 +216,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUnlistedRatePlanList?HotelCode=CKR&OTARateID=&RoomTypeID=6cb0a7e0-b97e-4beb-bfaf-3d6fa4119391'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUnlistedRatePlanList?HotelCode=CKR&OTARateID=&RoomTypeID=6cb0a7e0-b97e-4beb-bfaf-3d6fa4119391',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -487,7 +487,7 @@ const axios = require('axios');
 let config = {
   method: 'delete',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteRatePlan/CKR/JOYQ/HM'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteRatePlan/CKR/JOYQ/HM',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -535,7 +535,7 @@ const axios = require('axios');
 let config = {
   method: 'delete',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteRatePlanInternalOnly/CKR/JOYQ/HM'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteRatePlanInternalOnly/CKR/JOYQ/HM',
   headers:{
     'Authorization': `Bearer ${token}`
   }

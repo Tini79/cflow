@@ -25,7 +25,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRoomTypesList?HotelCode=CKR'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRoomTypesList?HotelCode=CKR',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -106,7 +106,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRoomType/CKR/SGL'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRoomType/CKR/SGL',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -184,7 +184,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRoomTypeComboList?HotelCode=CKR'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRoomTypeComboList?HotelCode=CKR',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -241,7 +241,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUnlistedRoomTypeList?HotelCode=CKR&OTARoomID=6cb0a7e0-b97e-4beb-bfaf-3d6fa4119391'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUnlistedRoomTypeList?HotelCode=CKR&OTARoomID=6cb0a7e0-b97e-4beb-bfaf-3d6fa4119391',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -508,7 +508,7 @@ const axios = require('axios');
 let config = {
   method: 'delete',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteRoomType/CKR/SGL'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteRoomType/CKR/SGL',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -555,7 +555,7 @@ const axios = require('axios');
 let config = {
   method: 'delete',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteRoomTypeInternalOnly/CKR/SGL'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteRoomTypeInternalOnly/CKR/SGL',
   headers:{
     'Authorization': `Bearer ${token}`
   }

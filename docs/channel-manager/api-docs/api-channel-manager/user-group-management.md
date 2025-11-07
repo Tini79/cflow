@@ -270,7 +270,7 @@ const axios = require('axios');
 let config = {
   method: 'delete',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteUserGroup/JONY'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteUserGroup/JONY',
   'Authorization': `Bearer ${token}`
 };
 

@@ -25,7 +25,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetPropertiesList/CKR'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetPropertiesList/CKR',
 };
 
 axios.request(config)
@@ -124,7 +124,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetPropertyByCode/CKR'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetPropertyByCode/CKR',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -221,7 +221,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetPropertyComboList/S?Username=System&IsGeneral=true&IsEdit=false'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetPropertyComboList/S?Username=System&IsGeneral=true&IsEdit=false',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -280,7 +280,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUnlistedPropertyList?OTAPropertyID=c4e540c0-40d8-44ff-9842-e87e08440973'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUnlistedPropertyList?OTAPropertyID=c4e540c0-40d8-44ff-9842-e87e08440973',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -647,7 +647,7 @@ const axios = require('axios');
 let config = {
   method: 'delete',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteProperties/CKR'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteProperties/CKR',
   headers:{
     'Authorization': `Bearer ${token}`
   }
