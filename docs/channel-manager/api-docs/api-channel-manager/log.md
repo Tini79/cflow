@@ -25,12 +25,15 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetInternalBookingList/CKR'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetInternalBookingList/CKR',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('Log list retrieved successfully');
+  console.log('Internal booking log list retrieved successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -118,13 +121,15 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetLogARI/1'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetLogARI/1',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('Log retrieved successfully');
+  console.log('ARI log retrieved successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -185,8 +190,10 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetLogEmailList/1'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetLogEmailList/1',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -264,7 +271,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateInternalBookingStatus',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -294,7 +301,7 @@ axios.request(config)
 
 Used to resend email notifications that previously failed to be delivered to the registered property email address.
 
-**Endpoint:** `POST /InsertInternalRatePlan`
+**Endpoint:** `POST /ResendEmailLog`
 
 **Request Body:**
 
@@ -320,10 +327,10 @@ let data = JSON.stringify({
 let config = {
   method: 'post',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/InsertInternalRatePlan',
+  url: 'https://cm.cakrasoft.net/cm/api/v2/ResendEmailLog',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };

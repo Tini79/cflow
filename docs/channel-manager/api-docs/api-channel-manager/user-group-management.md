@@ -26,7 +26,10 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUserGroupList'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUserGroupList',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -91,8 +94,10 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUserGroupByCode/S'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUserGroupByCode/S',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -158,7 +163,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/InsertUserGroup',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -220,7 +225,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateUserGroup',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -266,7 +271,7 @@ let config = {
   method: 'delete',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteUserGroup/JONY'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  'Authorization': `Bearer ${token}`
 };
 
 axios.request(config)

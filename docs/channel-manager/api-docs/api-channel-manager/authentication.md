@@ -204,7 +204,9 @@ let config = {
   method: 'get',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/CheckAccessToResetPass',
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -259,7 +261,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/ConfirmForgetPassword',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -322,12 +324,12 @@ let data = JSON.stringify({
 });
 
 let config = {
-  method: 'put',
+  method: 'post',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/ChangePassword',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };

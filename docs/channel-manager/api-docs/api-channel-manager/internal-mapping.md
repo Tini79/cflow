@@ -27,12 +27,15 @@ let config = {
   method: "get",
   maxBodyLength: Infinity,
   url: "https://cm.cakrasoft.net/cm/api/v2/GetInternalMappingList/CKR",
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios
   .request(config)
   .then((response) => {
-    console.log("User list retrieved successfully");
+    console.log("Internal mapping list retrieved successfully");
   })
   .catch((error) => {
     console.log(error);
@@ -75,9 +78,7 @@ axios
 ```
 
 #### Response Field Details
-
 **Result**: An array containing user records returned by the API.
-
 - `hotel_code`: The unique code identifying the hotel.
 - `cm_rate_plan_code`: The rate plan code from the Channel Manager.
 - `cm_rate_plan_name`: The rate plan name from the Channel Manager.
@@ -115,13 +116,15 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetInternalMapping/1'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetInternalMapping/1',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('User retrieved successfully');
+  console.log('Internal mapping retrieved successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -157,26 +160,24 @@ axios.request(config)
 ```
 
 #### Response Field Details
-
 **Result**: An object containing user record returned by the API.
-
-- `hotel_code`: The unique code identifying the hotel.
-- `cm_rate_plan_code`: The rate plan code from the Channel Manager.
-- `cm_rate_plan_name`: The rate plan name from the Channel Manager.
-- `cm_room_type_code`: The room type code from the Channel Manager.
-- `cm_room_type_name`: The room type name from the Channel Manager.
-- `id`: The unique ID of this mapping record.
-- `id_internal_rate_plan`: The internal system ID of the mapped rate plan.
-- `internal_rate_plan_code`: The internal rate plan code used by the PMS/system.
-- `internal_rate_plan_name`: The internal rate plan name used by the PMS/system.
-- `internal_room_type_code`: The internal room type code used by the PMS/system.
-- `internal_room_type_name`: The internal room type name used by the PMS/system.
-- `is_static`: Indicates whether the mapping is static (0 = dynamic, 1 = static).
-- `mapping_code`: The combined mapping code (CM rate plan code : Internal rate plan code).
-- `created_at`: The timestamp when this mapping record was created.
-- `created_by`: The user or system that created this mapping record.
-- `updated_at`: The timestamp when this mapping record was last updated.
-- `updated_by`: The user or system that last updated this mapping record.
+  - `hotel_code`: The unique code identifying the hotel.
+  - `cm_rate_plan_code`: The rate plan code from the Channel Manager.
+  - `cm_rate_plan_name`: The rate plan name from the Channel Manager.
+  - `cm_room_type_code`: The room type code from the Channel Manager.
+  - `cm_room_type_name`: The room type name from the Channel Manager.
+  - `id`: The unique ID of this mapping record.
+  - `id_internal_rate_plan`: The internal system ID of the mapped rate plan.
+  - `internal_rate_plan_code`: The internal rate plan code used by the PMS/system.
+  - `internal_rate_plan_name`: The internal rate plan name used by the PMS/system.
+  - `internal_room_type_code`: The internal room type code used by the PMS/system.
+  - `internal_room_type_name`: The internal room type name used by the PMS/system.
+  - `is_static`: Indicates whether the mapping is static (0 = dynamic, 1 = static).
+  - `mapping_code`: The combined mapping code (CM rate plan code : Internal rate plan code).
+  - `created_at`: The timestamp when this mapping record was created.
+  - `created_by`: The user or system that created this mapping record.
+  - `updated_at`: The timestamp when this mapping record was last updated.
+  - `updated_by`: The user or system that last updated this mapping record.
 
 ## 3. Create Internal Mapping API
 
@@ -202,7 +203,6 @@ Create a new internal mapping in the system.
 ```
 
 #### Request Body Field Details
-
 - `hotel_code`: The unique code identifying the hotel.
 - `internal_rate_plan_code`: The internal rate plan code used by the PMS or internal system.
 - `internal_rate_plan_name`: The internal rate plan name used by the PMS or internal system.
@@ -232,8 +232,7 @@ let config = {
   url: "https://cm.cakrasoft.net/cm/api/v2/InsertInternalMapping/CKR",
   headers: {
     "Content-Type": "application/json",
-    token:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0",
+    'Authorization': `Bearer ${token}`
   },
   data: data,
 };
@@ -288,7 +287,6 @@ Update a internal mapping in the system.
 ```
 
 #### Request Body Field Details
-
 - `hotel_code`: The unique code identifying the hotel.
 - `internal_room_type_code`: The internal room type code used by the PMS/internal system.
 - `internal_room_type_name`: The internal room type name used by the PMS/internal system.
@@ -326,8 +324,7 @@ let config = {
   url: "https://cm.cakrasoft.net/cm/api/v2/UpdateInternalMapping/8",
   headers: {
     "Content-Type": "application/json",
-    token:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0",
+    'Authorization': `Bearer ${token}`
   },
   data: data,
 };
@@ -375,7 +372,6 @@ Reset a internal mapping in the system.
 ```
 
 #### Request Body Field Details
-
 - `internal_room_type_code`: The internal room type code used by the PMS/internal system.
 - `internal_room_type_name`: The internal room type name used by the PMS/internal system.
 - `internal_rate_plan_code`: The internal rate plan code used by the PMS/internal system.
@@ -401,8 +397,7 @@ let config = {
   url: "https://cm.cakrasoft.net/cm/api/v2/ResetMapping/8",
   headers: {
     "Content-Type": "application/json",
-    token:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0",
+    'Authorization': `Bearer ${token}`
   },
   data: data,
 };
@@ -433,7 +428,7 @@ axios
 
 Delete a internal mapping.
 
-**Endpoint:** `DELETE /DeleteInternalRatePlan/{id}`
+**Endpoint:** `DELETE /DeleteInternalMapping/{id}`
 
 **Parameters:**
 
@@ -449,8 +444,8 @@ const axios = require('axios');
 let config = {
   method: 'delete',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteInternalRatePlan/8'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteInternalMapping/8',
+  'Authorization': `Bearer ${token}`
 };
 
 axios.request(config)

@@ -1,12 +1,12 @@
 ---
-title: API Export File
-description: Complete API reference for managing Export File
+title: API Import File
+description: Complete API reference for managing Import File
 sidebar_position: 17
 ---
 
-# Export Excel File API Endpoints
+# Import Excel File API Endpoints
 
-Used to export excel file on Cakrahub Channel Manager system.
+Used to import excel file on Cakrahub Channel Manager system.
 
 **Endpoint:** `POST /ReadExcelFile`
 
@@ -48,7 +48,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/ReadExcelFile',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };

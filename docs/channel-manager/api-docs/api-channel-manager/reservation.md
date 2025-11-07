@@ -19,15 +19,14 @@ let config = {
   method: 'get',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/ReadBooking',
-  auth: {
-    username: 'your_username',
-    password: 'your_password'
+  headers: {
+    'Authorization': `Basic ${token}`
   }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('booking list retrieved successfully');
+  console.log('Booking list retrieved successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -124,12 +123,12 @@ let config = {
   method: 'get',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/GetReservation/CKR',
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  'Authorization': `Bearer ${token}`
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('booking list retrieved successfully');
+  console.log('Booking list retrieved successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -202,7 +201,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/ReservationNotif',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'Basic <base64(username:password)>'
+    'Authorization': `Basic ${token}`
   },
   data : data
 };
@@ -264,7 +263,9 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/ResendBooking',
   headers: {
     'Content-Type': 'application/json',
-    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    headers:{
+      'Authorization': `Bearer ${token}`
+    }
   },
   data : data
 };
@@ -347,7 +348,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/ReadBookingWebhook',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'Basic <base64(username:password)>'
+    'Authorization': `Basic ${token}`
   },
   data : data
 };

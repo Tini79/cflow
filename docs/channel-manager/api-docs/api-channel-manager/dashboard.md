@@ -25,7 +25,10 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetBookingCount/Drune'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetBookingCount/CKR',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -260,7 +263,10 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetInvCount/Drune'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetInvCount/CKR',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -366,7 +372,10 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRevenueCount/Drune'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRevenueCount/CKR',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -522,3 +531,59 @@ axios.request(config)
   - `current_revenue`: Total revenue for the most recent day.
   - `monthly_revenue`: Total accumulated revenue for the current month.
   - `annually_revenue`: Total accumulated revenue for the current year.
+
+## 4. Get OTA Booking Count
+
+Retrieve booking count.
+
+**Endpoint:** `GET /GetOTABookingCount/{hotel_code}`
+
+**Parameters:**
+- `hotel_code`: Hotel code
+
+**Example Request:**
+
+```javascript
+const axios = require('axios');
+
+let config = {
+  method: 'get',
+  maxBodyLength: Infinity,
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetOTABookingCount/CKR',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
+};
+
+axios.request(config)
+.then((response) => {
+  console.log('Booking count retrieved successfully');
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+**Example Response:**
+
+```json
+{
+  "StatusCode": 0,
+  "Message": "Success",
+  "Result": {
+    "monthly_ota_booking": [
+      {
+        "booking_count": 42,
+        "month": "1",
+        "ota_code": "EXPEDIA"
+      }
+    ]
+  }
+}
+```
+
+#### Response Field Details
+**Result**: An array containing booking count returned by the API.
+  - `booking_count`: Number of bookings recorded for the month.
+  - `month`: Month of the booking data. Use numbers "1" to "12" to represent January to December.
+  - `ota_code`: The OTA (Online Travel Agency) code that the bookings belong to.    

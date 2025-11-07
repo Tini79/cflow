@@ -26,6 +26,9 @@ let config = {
   method: 'get',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/GetRoomTypesList?HotelCode=CKR'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -46,7 +49,7 @@ axios.request(config)
   "Result": [
     {
       "hotel_code": "CKR",
-      "room_type_code": "SIN KING",
+      "room_type_code": "SKG",
       "name": "SIN KING",
       "ota_room_name": "SIN KING",
       "count_of_rooms": 10,
@@ -104,12 +107,14 @@ let config = {
   method: 'get',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/GetRoomType/CKR/SGL'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('Room Type retrieved successfully');
+  console.log('Room type retrieved successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -180,12 +185,14 @@ let config = {
   method: 'get',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/GetRoomTypeComboList?HotelCode=CKR'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('Room Type combolist retrieved successfully');
+  console.log('Room type combolist retrieved successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -200,7 +207,7 @@ axios.request(config)
   "Message": "Success",
   "Result": [
     {
-      "name": "Double Room",
+      "name": "Single Room",
       "code": "SGL",
       "room_type_id": "6cb0a7e0-b97e-4beb-bfaf-3d6fa4119391",
       "room_type_code": ""
@@ -235,7 +242,9 @@ let config = {
   method: 'get',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/GetUnlistedRoomTypeList?HotelCode=CKR&OTARoomID=6cb0a7e0-b97e-4beb-bfaf-3d6fa4119391'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -360,7 +369,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/InsertRoomType',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -453,7 +462,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateRoomType',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -500,12 +509,14 @@ let config = {
   method: 'delete',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteRoomType/CKR/SGL'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('Room Type deleted successfully');
+  console.log('Room type deleted successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -545,12 +556,14 @@ let config = {
   method: 'delete',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteRoomTypeInternalOnly/CKR/SGL'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('Room Type deleted successfully');
+  console.log('Room type deleted successfully');
 })
 .catch((error) => {
   console.log(error);

@@ -22,7 +22,7 @@ https://cm.cakrasoft.net/cm/api/v1
 
 ## Authentication
 
-This API supports two authentication modes:
+This API supports three authentication modes:
 
 ### 1. Basic Authentication
 Certain endpoints require Basic Auth. The `username` and `password` for Basic Auth
@@ -33,11 +33,10 @@ Authorization: Basic <base64(username:password)>
 ```
 
 ### 2. Token Authentication
-Some endpoints require sending an authentication token using a custom header named `token`.
-Clients must include the token in the request header to access protected endpoints.
+Some endpoints require sending an authentication using a Bearer token.
 ```
 headers: {
-  'token': 'your-api-token-here'
+  'Authorization': `Bearer ${token}`
 }
 ```
 

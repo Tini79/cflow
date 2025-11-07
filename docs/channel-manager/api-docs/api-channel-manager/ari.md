@@ -79,7 +79,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateARIRatePlan',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Basic ${token}`
   },
   data : data
 };
@@ -163,7 +163,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateARIAvailability',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Basic ${token}`
   },
   data : data
 };

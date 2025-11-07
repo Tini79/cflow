@@ -27,12 +27,14 @@ let config = {
   method: 'get',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/GetRatePlansList?HotelCode=CKR&PageNumber=1'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('Rate Plan list retrieved successfully');
+  console.log('Rate plan list retrieved successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -122,12 +124,14 @@ let config = {
   method: 'get',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/GetRatePlan/CKR/JOYQ/HM'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('Rate Plan retrieved successfully');
+  console.log('Rate plan retrieved successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -213,7 +217,9 @@ let config = {
   method: 'get',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/GetUnlistedRatePlanList?HotelCode=CKR&OTARateID=&RoomTypeID=6cb0a7e0-b97e-4beb-bfaf-3d6fa4119391'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -345,7 +351,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/InsertRatePlan',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -434,7 +440,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateRatePlan',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -482,12 +488,14 @@ let config = {
   method: 'delete',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteRatePlan/CKR/JOYQ/HM'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('Rate Plan deleted successfully');
+  console.log('Rate plan deleted successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -528,12 +536,14 @@ let config = {
   method: 'delete',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteRatePlanInternalOnly/CKR/JOYQ/HM'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('Rate Plan deleted successfully');
+  console.log('Rate plan deleted successfully');
 })
 .catch((error) => {
   console.log(error);

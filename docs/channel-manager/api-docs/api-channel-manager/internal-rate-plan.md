@@ -17,10 +17,6 @@ Retrieve internal rate plan list.
 **Parameters:**
 - `hotel_code`: Hotel code
 
-**Query Parameters:**
-- `Index`: The column index selected as the target for the query.
-- `Text`: The text value used for filtering.
-
 **Example Request:**
 
 ```javascript
@@ -29,12 +25,15 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetInternalRatePlanList/CKR'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetInternalRatePlanList/CKR',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('User list retrieved successfully');
+  console.log('Internal rate plan list retrieved successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -106,13 +105,15 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetInternalRatePlan/1'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetInternalRatePlan/1',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('User retrieved successfully');
+  console.log('Internal rate plan retrieved successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -181,13 +182,15 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRatePlanComboListByRoomType?HotelCode=CKR&RoomTypeCode=HM'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetRatePlanComboListByRoomType?HotelCode=CKR&RoomTypeCode=HM',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('Property combolist retrieved successfully');
+  console.log('Rate plan combolist retrieved successfully');
 })
 .catch((error) => {
   console.log(error);
@@ -269,7 +272,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/InsertInternalRatePlan/CKR',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -355,7 +358,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateInternalRatePlan/1',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -400,13 +403,15 @@ const axios = require('axios');
 let config = {
   method: 'delete',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteInternalRatePlan/8'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteInternalRatePlan/8',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
 .then((response) => {
-  console.log('Property deleted successfully');
+  console.log('Internal rate plan deleted successfully');
 })
 .catch((error) => {
   console.log(error);

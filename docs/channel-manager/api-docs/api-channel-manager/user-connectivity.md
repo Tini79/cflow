@@ -14,10 +14,6 @@ Retrieve user connectivity list.
 
 **Endpoint:** `GET /GetUserConnectivityList`
 
-**Query Parameters:**
-- `Index`: The column index selected as the target for the query.
-- `Text`: The text value used for filtering.
-
 **Example Request:**
 
 ```javascript
@@ -26,7 +22,10 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUserConnectivityList?Index=0&Text='
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUserConnectivityList?Index=0&Text=',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -87,8 +86,10 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUserConnectivity/1'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUserConnectivity/1',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -170,7 +171,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/InsertUserConnectivity',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -239,7 +240,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateUserConnectivity',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -269,7 +270,7 @@ axios.request(config)
 
 This is used by the PMS to update its API credentials for connecting to the Cakrahub Channel Manager backend. The PMS provides its current credentials and a new password to securely replace the old one, ensuring continued authenticated access.
 
-**Endpoint:** `POST /InsertUserConnectivity`
+**Endpoint:** `POST /SetNewUserConnectivity`
 
 **Request Body:**
 
@@ -305,10 +306,10 @@ let data = JSON.stringify({
 let config = {
   method: 'post',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/InsertUserConnectivity',
+  url: 'https://cm.cakrasoft.net/cm/api/v2/SetNewUserConnectivity',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -353,8 +354,8 @@ const axios = require('axios');
 let config = {
   method: 'delete',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteUserConnectivity/1'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteUserConnectivity/1',
+  'Authorization': `Bearer ${token}`
 };
 
 axios.request(config)

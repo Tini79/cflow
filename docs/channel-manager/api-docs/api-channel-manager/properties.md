@@ -25,7 +25,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetPropertiesList/Drune'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetPropertiesList/CKR'
 };
 
 axios.request(config)
@@ -124,8 +124,10 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetPropertyByCode/Drune'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetPropertyByCode/CKR'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -144,25 +146,25 @@ axios.request(config)
   "StatusCode": 0,
   "Message": "",
   "Result": {
-    "state": "Riau",
-    "address": "Komplek Ruko Nagoya Hill Blok I No. 10-16, Jl. Teuku Umar No.10, Kota, Kec. Lubuk Baja, Kota Batam, Kepulauan Riau 29444",
-    "country_code": "ID",
-    "property_name": "Alltrue Lite Batam",
-    "name": "Alltrue Lite Batam",
+    "state": "California",
+    "address": "1234 Sunset Blvd, Suite 500, Los Angeles, CA 90026",
+    "country_code": "US",
+    "property_name": "Sunrise Hotel LA",
+    "name": "Sunrise Hotel LA",
     "property_type": "hotel",
-    "currency_code": "IDR",
-    "emails": null,
-    "city": "Batam",
-    "phone_number": "(0778) 7430488",
-    "website": "https://alltruelitebatam.chsres.com",
-    "zip_code": "29444",
-    "user_api_key": "AjX+ttCJ6052EobW6e+aA11r/+gAWCXhaIH/YsXTOv/5BcV2BQoYrf7RbSoXOhlhhSja3Lz60lOUWrWwq2XJASYGUv4lhKKfTQgBMR7NfME=",
-    "property_status": "M",
-    "is_cc": "0",
+    "currency_code": "USD",
+    "emails": "info@sunsethotel.com",
+    "city": "Los Angeles",
+    "phone_number": "(323) 555-7890",
+    "website": "https://sunsethotel.com",
+    "zip_code": "90026",
+    "user_api_key": "user_api_key",
+    "property_status": "N",
+    "is_cc": "1",
     "is_bcc": "0",
-    "is_directly": "0",
-    "property_id": "1d9a27a8-3ea0-4e33-b5c5-d77b0c41b3dc",
-    "id": "28"
+    "is_directly": "1",
+    "property_id": "5c8f45e1-7da2-4b55-d7f7-f99c2e63d7af",
+    "id": "101"
   }
 }
 ```
@@ -220,7 +222,9 @@ let config = {
   method: 'get',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/GetPropertyComboList/S?Username=System&IsGeneral=true&IsEdit=false'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -277,7 +281,9 @@ let config = {
   method: 'get',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/GetUnlistedPropertyList?OTAPropertyID=c4e540c0-40d8-44ff-9842-e87e08440973'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
@@ -310,7 +316,7 @@ axios.request(config)
       "min_stay_type": "arrival",
       "zip_code": "90210",
       "group_name": "Operations",
-      "user_api_key": "api_AjXttCJ6052EobW6e_aA11r_examplekey",
+      "user_api_key": "user_api_key",
       "is_cc": "0",
       "is_bcc": "0",
       "is_directly": "1",
@@ -385,7 +391,7 @@ Create a new property.
   "property_id": "your_property_id",
   "property_status": "N",
   "min_stay_type": "arrival",
-  "user_api_key": "your_property_api_key",
+  "user_api_key": "user_api_key",
   "is_cc": "true",
   "is_bcc": "false",
   "is_directly": "true",
@@ -449,7 +455,7 @@ let data = JSON.stringify({
   "property_id": "your_property_id",
   "property_status": "N",
   "min_stay_type": "arrival",
-  "user_api_key": "your_property_api_key",
+  "user_api_key": "user_api_key",
   "is_cc": "true",
   "is_bcc": "false",
   "is_directly": "true",
@@ -465,7 +471,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/InsertProperties',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -515,7 +521,7 @@ Update a property.
   "address": "1234 Sunset Boulevard",
   "property_id": "your_property_id",
   "min_stay_type": "arrival",
-  "user_api_key": "your_property_api_key",
+  "user_api_key": "user_api_key",
   "is_cc": "true",
   "is_bcc": "false",
   "is_directly": "true",
@@ -580,7 +586,7 @@ let data = JSON.stringify({
   "address": "1234 Sunset Boulevard",
   "property_id": "your_property_id",
   "min_stay_type": "arrival",
-  "user_api_key": "your_property_api_key",
+  "user_api_key": "user_api_key",
   "is_cc": "true",
   "is_bcc": "false",
   "is_directly": "true",
@@ -596,7 +602,7 @@ let config = {
   url: 'https://cm.cakrasoft.net/cm/api/v2/UpdateProperties',
   headers: {
     'Content-Type': 'application/json',
-    'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+    'Authorization': `Bearer ${token}`
   },
   data : data
 };
@@ -642,7 +648,9 @@ let config = {
   method: 'delete',
   maxBodyLength: Infinity,
   url: 'https://cm.cakrasoft.net/cm/api/v2/DeleteProperties/CKR'
-  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjIyNDE1NDQsInVzZXIiOiJDTSBURUFNIn0.W-JJ1uXJ9hvNyZVYZVoRLmuZoJ_zS4YEtx-VZwJEtm0'
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
 };
 
 axios.request(config)
