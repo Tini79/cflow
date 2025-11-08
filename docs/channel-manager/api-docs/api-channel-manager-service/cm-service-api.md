@@ -25,23 +25,3 @@ Clients must include a Base64-encoded username and password in the request heade
 ```
 Authorization: Basic <base64(username:password)>
 ```
-
-## 2. Desktop Service
-<!-- TODO: perlu masukkan tutorial untuk setupnya ini, base url ini diambil dari port berapa yg jalan pada service yg jalan di komputer client -->
-### Base URL
-
-```
-
-```
-
-### Authentication
-
-This API supports `Basic Authentication`.
-
-#### Basic Authentication
-Certain endpoints require Basic Auth. The `username` and `password` for Basic Auth
-can be obtained from the PMS Connectivity menu in the system.
-Clients must include a Base64-encoded username and password in the request header:
-```
-Authorization: Basic <base64(username:password)>
-```
