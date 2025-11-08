@@ -1,6 +1,6 @@
 ---
-title: API Reservation
-description: Complete API reference for managing Reservation
+title: API Reservations
+description: Complete API reference for managing Reservations
 sidebar_position: 5
 ---
 

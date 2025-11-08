@@ -8,7 +8,7 @@ sidebar_position: 11
 
 This page provides an overview of the available API endpoints for managing User Group through CRUD operations.
 
-## 1. Get User Group  List
+## 1. Get User Group List
 
 Retrieve user group list.
 
@@ -127,7 +127,60 @@ axios.request(config)
   - `code`: The unique user identifier or username.
   - `name`: The user’s registered name.
 
-## 3. Create User Group API
+## 3. Get User Group Combolist
+
+Retrieve user group combolist.
+
+**Endpoint:** `GET /GetUserGroupComboList`
+
+**Example Request:**
+
+```javascript
+const axios = require('axios');
+
+let config = {
+  method: 'get',
+  maxBodyLength: Infinity,
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUserGroupComboList',
+  headers:{
+    'Authorization': `Bearer ${token}`
+  }
+};
+
+axios.request(config)
+.then((response) => {
+  console.log('User group combolist retrieved successfully');
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+**Example Response:**
+
+```json
+{
+  "StatusCode": 0,
+  "Message": "Success",
+  "Result": [
+    {
+        "code": "S",
+        "name": "System"
+    },
+    {
+        "code": "U",
+        "name": "User"
+    }
+  ]
+}
+```
+
+#### Response Field Details
+**Result**: An object containing hotel/property records returned by the API.
+  - `code`: The identifier of the user group.
+  - `name`: The display name or description of the user group.
+
+## 4. Create User Group
 
 Register a new user group in the system.
 
@@ -189,7 +242,7 @@ axios.request(config)
 }
 ```
 
-## 4. Update User API
+## 5. Update User Group
 
 Update a user group in the system.
 
@@ -251,7 +304,7 @@ axios.request(config)
 }
 ```
 
-## 5. Delete User Group
+## 6. Delete User Group
 
 Delete a user group.
 

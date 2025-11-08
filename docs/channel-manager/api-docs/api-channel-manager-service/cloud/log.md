@@ -1,10 +1,10 @@
 ---
-title: API Log File
-description: Complete API reference for managing Log File
+title: API Log Files
+description: Complete API reference for managing Log Files
 sidebar_position: 6
 ---
 
-# Log File API Documentation
+# Log Files API Documentation
 
 This page provides an overview of the available API endpoints for managing Log File through CRUD operations.
 

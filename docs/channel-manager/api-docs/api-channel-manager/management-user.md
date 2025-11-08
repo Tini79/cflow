@@ -133,61 +133,7 @@ axios.request(config)
   - `user_api_key`: The API key assigned to the user for system access.
   - `user_group_code`: The role or user group classification.
 
-## 3. Get User Group Combolist
-
-Retrieve user group combolist.
-
-**Endpoint:** `GET /GetUserGroupComboList`
-
-**Example Request:**
-
-```javascript
-const axios = require('axios');
-
-let config = {
-  method: 'get',
-  maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUserGroupComboList',
-  headers:{
-    'Authorization': `Bearer ${token}`
-  }
-};
-
-axios.request(config)
-.then((response) => {
-  console.log('User group combolist retrieved successfully');
-})
-.catch((error) => {
-  console.log(error);
-});
-```
-
-**Example Response:**
-
-```json
-{
-  "StatusCode": 0,
-  "Message": "Success",
-  "Result": [
-    {
-        "code": "S",
-        "name": "System"
-    },
-    {
-        "code": "U",
-        "name": "User"
-    }
-  ]
-}
-```
-
-#### Response Field Details
-**Result**: An object containing hotel/property records returned by the API.
-  - `code`: The identifier of the user group.
-  - `name`: The display name or description of the user group.
-
-
-## 4. Create User API
+## 3. Create User
 
 Create a new user account in the system.
 
@@ -263,7 +209,7 @@ axios.request(config)
 }
 ```
 
-## 5. Update User API
+## 4. Update User
 
 Update a user account in the system.
 
@@ -339,7 +285,7 @@ axios.request(config)
 }
 ```
 
-## 6. Activate/Deactivate User API
+## 5. Activate/Deactivate User
 
 Update a user active status in the system.
 
@@ -404,7 +350,7 @@ axios.request(config)
 }
 ```
 
-## 7. Delete User
+## 6. Delete User
 
 Delete a user.
 

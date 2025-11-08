@@ -4,7 +4,7 @@ description: Complete API reference for handling reservation on Channel Manager
 sidebar_position: 8
 ---
 
-## 1. Read Booking for Cakra PMS API
+## 1. Read Booking for Cakra PMS
 
 Read bookings from OTA and send them to Cakra PMS.
 
@@ -108,7 +108,7 @@ axios.request(config)
     - `special_requests`: Any special requests made by the guest.
     - `raw_message`: Raw message or data payload received from the OTA or channel system, useful for debugging or auditing.
 
-## 2. Send Booking to Other PMS API
+## 2. Send Booking to Other PMS
 
 Read bookings from OTA and send them to other PMS.
 The API response contains two types of booking data:
@@ -172,7 +172,7 @@ axios.request(config)
 - `booking_code`: Booking reference code provided by the OTA.
 - `otaid`: Identifier of the OTA from which the booking originated.
 
-## 3. Save and Acknoledge Booking API
+## 3. Save and Acknowledge Booking
 
 Saving the booking to the Channel Manager (CM) and PMS, including acknowledgment for bookings successfully received by the PMS.
 
@@ -231,7 +231,7 @@ axios.request(config)
 }
 ```
 
-## 4. Resend Booking API
+## 4. Resend Booking
 
 Resending the booking to the PMS if it failed or has not yet been delivered.
 
@@ -295,7 +295,7 @@ axios.request(config)
 }
 ```
 
-## 5. Read Booking Webhook API
+## 5. Read Booking Webhook
 
 This API serves as the booking webhook endpoint used by Channex to send reservation data to the Cakrahub Channel Manager. Whenever a new booking or booking update occurs, Channex pushes the booking payload to this endpoint so Cakrahub can process, store, and synchronize the reservation with the PMS.
 

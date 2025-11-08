@@ -1,10 +1,10 @@
 ---
-title: API Room Rate
-description: Complete API reference for managing Room Rate
+title: API Room Rates
+description: Complete API reference for managing Room Rates
 sidebar_position: 4
 ---
 
-# Room Rate API Documentation
+# Room Rates API Documentation
 
 This page provides an overview of the available API endpoints for managing Room Rate.
 

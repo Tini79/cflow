@@ -98,9 +98,9 @@ axios
 - `updated_by`: The user who performed the most recent update.
 - `pagination`: Pagination metadata for the specific result item (total, limit, page).
 
-## 2. Get Internal Mapping By Code
+## 2. Get Internal Mapping By Id
 
-Retrieve one internal mapping by code.
+Retrieve one internal mapping by id.
 
 **Endpoint:** `GET /GetInternalMapping/{id}`
 
@@ -179,7 +179,7 @@ axios.request(config)
   - `updated_at`: The timestamp when this mapping record was last updated.
   - `updated_by`: The user or system that last updated this mapping record.
 
-## 3. Create Internal Mapping API
+## 3. Create Internal Mapping
 
 Create a new internal mapping in the system.
 
@@ -259,7 +259,7 @@ axios
 }
 ```
 
-## 4. Update Internal Mapping API
+## 4. Update Internal Mapping
 
 Update a internal mapping in the system.
 
@@ -351,7 +351,7 @@ axios
 }
 ```
 
-## 5. Reset Internal Mapping API
+## 5. Reset Internal Mapping
 
 Reset a internal mapping in the system.
 

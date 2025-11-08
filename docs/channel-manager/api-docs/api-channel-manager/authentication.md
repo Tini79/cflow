@@ -69,7 +69,7 @@ axios.request(config)
 }
 ```
 
-## 2. Login API
+## 2. Login
 
 The Login API is used to authenticate a user by validating their credentials.
 
@@ -130,7 +130,7 @@ axios.request(config)
 }
 ```
 
-## 3. Request to Change Password API
+## 3. Request to Change Password
 
 This API endpoint is used to initiate the password-change process.
 The user provides their registered email address, and the system sends a password-reset or change-password link/code to that email. This ensures that only the rightful owner of the account can proceed with updating their password.
@@ -189,7 +189,7 @@ axios.request(config)
 }
 ```
 
-## 4. Check Access to Reset Password API
+## 4. Check Access to Reset Password
 
 This endpoint is used to verify the validity and expiration of a password reset link. The reset link contains a token, which must be provided in the request to this API.
 
@@ -228,7 +228,7 @@ axios.request(config)
 }
 ```
 
-## 5. Confirm Reset Password API
+## 5. Confirm Reset Password
 
 Reset the user’s password after the reset token has been verified.
 
@@ -287,7 +287,7 @@ axios.request(config)
 }
 ```
 
-## 6. Change Password API
+## 6. Change Password
 
 This endpoint allows an authenticated user to update their password while logged in.
 

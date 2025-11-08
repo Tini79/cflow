@@ -8,7 +8,7 @@ sidebar_position: 12
 
 This page provides an overview of the available API endpoints for managing Internal Rate Plan through CRUD operations. It also specifies that all data handled in these endpoints originates from the PMS (Property Management System), ensuring synchronization between the PMS and the internal system.
 
-## 1. Get Internal Rate Plan  List
+## 1. Get Internal Rate Plan List
 
 Retrieve internal rate plan list.
 
@@ -88,9 +88,9 @@ axios.request(config)
   - `updated_by`: The user who performed the most recent update.
   - `pagination`: Pagination metadata for the specific result item (total, limit, page).
 
-## 2. Get Internal Rate Plan By Code
+## 2. Get Internal Rate Plan By Id
 
-Retrieve one internal rate plan by code.
+Retrieve one internal rate plan by id.
 
 **Endpoint:** `GET /GetInternalRatePlan/{id}`
 
@@ -218,7 +218,7 @@ axios.request(config)
   - `room_type_id`: Internal system ID referencing the room type related to this item.
   - `room_type_code`: The internal or PMS room-type code associated with this item.
 
-## 4. Create Internal Rate Plan API
+## 4. Create Internal Rate Plan
 
 Create a new internal rate plan in the system.
 
@@ -298,7 +298,7 @@ axios.request(config)
 }
 ```
 
-## 5. Update User API
+## 5. Update Internal Rate Plan
 
 Update a internal rate plan in the system.
 

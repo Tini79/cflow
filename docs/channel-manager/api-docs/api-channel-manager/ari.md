@@ -4,7 +4,7 @@ description: Complete API reference for managing room rate and room availability
 sidebar_position: 7
 ---
 
-## 1. Update Rate Plan API
+## 1. Update Rate Plan
 
 To update the pricing, details, or conditions of an existing rate plan for a hotel or property.
 
@@ -105,7 +105,7 @@ axios.request(config)
 }
 ```
 
-## 2. Update Room Availability API
+## 2. Update Room Availability
 
 To update the availability of rooms in a hotel or property for specific dates.
 

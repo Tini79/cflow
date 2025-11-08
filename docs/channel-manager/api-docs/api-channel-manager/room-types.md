@@ -1,7 +1,7 @@
 ---
 title: API Room Types
 description: Complete API reference for managing Room Types through CRUD operations
-sidebar_position: 6
+sidebar_position: 5
 ---
 
 # Room Types API Endpoints

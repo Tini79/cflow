@@ -22,7 +22,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUserConnectivityList?Index=0&Text=',
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetUserConnectivityList',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -69,9 +69,9 @@ axios.request(config)
   - `updated_at`: Timestamp indicating when the user connectivity record was last updated.
   - `updated_by`: The user who last updated the record.
 
-## 2. Get User Connectivity By Code
+## 2. Get User Connectivity By Id
 
-Retrieve one user connectivity by code.
+Retrieve one user connectivity by id.
 
 **Endpoint:** `GET /GetUserConnectivity/{id}`
 

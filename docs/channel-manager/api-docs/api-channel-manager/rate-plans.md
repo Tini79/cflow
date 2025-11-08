@@ -1,7 +1,7 @@
 ---
 title: API Rate Plans
 description: Complete API reference for managing Rate Plans through CRUD operations
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Rate Plans API Endpoints

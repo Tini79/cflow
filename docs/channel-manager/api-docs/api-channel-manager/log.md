@@ -121,7 +121,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetLogARI/1',
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetLogARI/CKR',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -190,7 +190,7 @@ const axios = require('axios');
 let config = {
   method: 'get',
   maxBodyLength: Infinity,
-  url: 'https://cm.cakrasoft.net/cm/api/v2/GetLogEmailList/1',
+  url: 'https://cm.cakrasoft.net/cm/api/v2/GetLogEmailList/CKR',
   headers:{
     'Authorization': `Bearer ${token}`
   }
@@ -235,7 +235,7 @@ axios.request(config)
   - `email_subject`: The subject line of the email that was delivered.
   - `created_at`: The timestamp when this log record was created.
 
-## 4. Update Internal Booking Status API
+## 4. Update Internal Booking Status
 
 Used to update the internal booking status.
 
@@ -297,7 +297,7 @@ axios.request(config)
 }
 ```
 
-## 5. Resend Email Log API
+## 5. Resend Email Log
 
 Used to resend email notifications that previously failed to be delivered to the registered property email address.
 
