@@ -8,11 +8,11 @@ sidebar_position: 2
 
 This section provides instructions for installing and configuring the service on the client’s computer. It covers all required steps, including environment setup, dependency installation, credential configuration, and ensuring the service runs correctly on the client’s local machine.
 
-To begin the setup, make sure you have all the required files ready. Follow the steps below to verify the files and prepare the system for installation.
+To begin the setup, make sure you have all the required files ready. Also ensure that you have already accessed the `Service Channel Manager` page in the PMS before continuing with the installation process.
 
 ## 1. Ensure all required files are complete
 Make sure the following files and folders are present before starting the setup:
-  ![Create Properties](../../../../../static/img/cm/desktop/installation-requirements.png)
+  ![Create Properties](../../../../static/img/cm/desktop/installation-requirements.png)
 - `config folder`
   Inside the config directory, you will find several configuration files used by the service:
     - `config` — Go source file used internally by the application (not intended for manual editing).
@@ -25,7 +25,7 @@ Make sure the following files and folders are present before starting the setup:
 ## 2. Run the Service and Configure Database Connection
 After that, run the CakrahubAPIService file as Administrator. You will then need to configure the integration with the client’s database by entering the required information, such as the database host, port, username, and password. Once the configuration is completed, a `Setting.ini` file will be automatically generated, containing the database connection details.
 These files are necessary for the installation and proper operation of the service on the client’s computer.
-  ![Create Properties](../../../../../static/img/cm/desktop/initial-setup.png)
+  ![Create Properties](../../../../static/img/cm/desktop/initial-setup.png)
 
 After completing, check the `CakrahubAPIService.txt` log file to verify whether any errors occurred. Make sure the service is running without issues before proceeding to the service installation step. This log file is generated automatically after running CakrahubAPIService as Administrator.
 

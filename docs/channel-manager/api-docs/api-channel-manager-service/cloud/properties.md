@@ -412,7 +412,7 @@ axios.request(config)
 }
 ```
 
-## 6. Delete Property
+## 6.   
 
 Delete a property.
 

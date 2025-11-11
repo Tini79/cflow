@@ -1,6 +1,6 @@
 {
   "label": "PMS Mapping",
-  "position": 3,
+  "position": 9,
   "link": {
     "type": "generated-index",
     "description": "Menu ini digunakan untuk membuat, mengedit, atau menghapus data yang diperlukan untuk memetakan (mapping) informasi antara Channel Manager (CM) dan Property Management System (PMS). Dengan fitur ini, Anda dapat memastikan data dari CM dan PMS saling terhubung dan sinkron sesuai kebutuhan operasional hotel. Semua proses pengelolaan mapping dilakukan dengan mudah dan intuitif, sehingga integrasi data berjalan lancar."

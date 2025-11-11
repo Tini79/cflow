@@ -1,0 +1,8 @@
+{
+  "label": "Integration With Cloud PMS System",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Documentation for setting up and managing the integration between the Channel Manager and PMS system."
+  }
+}

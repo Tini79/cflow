@@ -1,7 +1,7 @@
 ---
 title: Manager User
 sidebar_label: Manage User
-sidebar_position: 5
+sidebar_position: 3
 ---
 
 # Manage User

@@ -1,0 +1,8 @@
+{
+  "label": "Integration With Desktop PMS System",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Documentation for integrating the Channel Manager with the Desktop PMS system and setting up the required services on the client’s laptop."
+  }
+}

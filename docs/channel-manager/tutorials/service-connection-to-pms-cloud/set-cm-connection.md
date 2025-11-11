@@ -1,7 +1,7 @@
 ---
-title: Setup Channel Manager Connection on PMS
+title: Setup Channel Manager Connection on PMS Cloud
 description: Complete instructions for setting up channel manager connection on PMS.
-sidebar_position: 4
+sidebar_position: 1
 ---
 
 # Setup Channel Manager Connection Documentation
@@ -9,13 +9,13 @@ This section explains how to connect the PMS to the Cakrahub Channel Manager. Th
 
 ## 1. Accessing the Channel Manager Settings
 To configure the Channel Manager connection, the user must first navigate to the correct settings page within the PMS:
-1. Go to the Tools menu in the top navigation bar.
-2. Select Settings.
-3. In the left panel, open the Integrations section.
-4. Click Channel Manager to display the configuration form.
+1. Go to the `Tools` menu in the top navigation bar.
+2. Select `Settings`.
+3. In the left panel, open the `Integrations` section.
+4. Click `Channel Manager` to display the configuration form.
 
 ## 2. Configuring the Channel Manager Connection
-  ![Create Properties](../../../static/img/cm/setup-cm-connection.png)
+  ![Create Properties](../../../../static/img/cm/setup-cm-connection.png)
   
 Once on the Channel Manager screen, you will need to enter the required credentials and connection details:
 

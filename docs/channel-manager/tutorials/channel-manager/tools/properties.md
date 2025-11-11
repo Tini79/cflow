@@ -1,12 +1,12 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Properties
 
 The Properties menu is used to display a list of properties, add, edit, or delete property data.
 
-![Properties Page](../../../static/img/cm/properties-page.png)
+![Properties Page](../../../../../static/img/cm/properties-page.png)
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -18,17 +18,17 @@ import TabItem from '@theme/TabItem';
 	<TabItem value="create" label="Create" default>
 		To add a property, you can press the create button in the upper right corner to bring up the form for entering the required property data.
 
-		![Create Properties](../../../static/img/cm/form-input-properties.png)
+		![Create Properties](../../../../../static/img/cm/form-input-properties.png)
 	</TabItem>
 	<TabItem value="update" label="Update">
 		This form appears when you press the edit button in the action column _(on the far right of the table)_.
 
-		![Create Properties](../../../static/img/cm/form-edit-properties.png)
+		![Create Properties](../../../../../static/img/cm/form-edit-properties.png)
 	</TabItem>
 	<TabItem value="remove" label="Remove">
 		When you press the remove button in the action column _(on the far right of the table)_, a notification/information will appear to confirm whether you are sure you want to delete the property.
 
-		![Create Properties](../../../static/img/cm/form-delete-properties.png)
+		![Create Properties](../../../../../static/img/cm/form-delete-properties.png)
 	</TabItem>
 </Tabs>
 

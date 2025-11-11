@@ -1,10 +1,10 @@
 ---
-title: Setup Property & Room Types
+title: Setup Room Types
 description: Guide for creating property and defining room types in Channel Manager
-sidebar_position: 1
+sidebar_position: 4
 ---
 
-# Setup Property & Room Types
+# Setup Room Types
 
 This tutorial will guide you through setting up your property and defining room types in the Channel Manager system.
 

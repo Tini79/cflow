@@ -1,7 +1,7 @@
 ---
 title: Monitor Bookings
 description: Monitor and manage bookings from all connected channels
-sidebar_position: 5
+sidebar_position: 8
 ---
 
 # Monitor Bookings

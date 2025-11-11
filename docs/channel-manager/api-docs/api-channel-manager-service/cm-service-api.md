@@ -8,7 +8,7 @@ sidebar_position: 1
 
 This page provides an overview of the available API endpoints for the Cakrahub Channel Manager Service. The API is available for both the cloud version and the desktop version of the application.
 
-## 1. Cloud Service
+## 1. Channel Manager Service
 ### Base URL
 
 ```

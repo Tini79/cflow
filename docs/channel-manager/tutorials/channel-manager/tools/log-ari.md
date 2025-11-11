@@ -1,7 +1,7 @@
 ---
 title: Log ARI
 sidebar_label: Log ARI
-sidebar_position: 7
+sidebar_position: 6
 ---
 
 # Log ARI

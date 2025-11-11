@@ -1,8 +1,8 @@
 {
-  "label": "Cloud CM Service API Docs",
+  "label": "CM Service API Docs",
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Comprehensive API documentation for Cloud Cakrahub Channel Manager Service, including integration guides, endpoints, and usage examples."
+    "description": "Comprehensive API documentation for Cakrahub Channel Manager Service, including integration guides, endpoints, and usage examples."
   }
 }

@@ -1,12 +1,12 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 # Login to Channel Manager
 
 
 This tutorial will guide you through the process of logging in to the Channel Manager at [https://cm.cakrasoft.net](https://cm.cakrasoft.net).
 
-![Login Page](../../../static/img/cm/login-page.png)
+![Login Page](../../../../static/img/cm/login-page.png)
 
 ## Steps to Login
 

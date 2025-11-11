@@ -1,10 +1,10 @@
 ---
-title: Configure Rate Plans
+title: Setup Rate Plans
 description: Setup rate plans and pricing strategies in Channel Manager
-sidebar_position: 2
+sidebar_position: 5
 ---
 
-# Configure Rate Plans
+# Setup Rate Plans
 
 This tutorial covers setting up rate plans and pricing strategies for your property.
 

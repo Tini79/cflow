@@ -1,7 +1,7 @@
 ---
 title: Manage Inventory
 description: Real-time availability and pricing management guide
-sidebar_position: 4
+sidebar_position: 6
 ---
 
 # Manage Inventory

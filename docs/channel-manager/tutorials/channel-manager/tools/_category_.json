@@ -1,0 +1,8 @@
+{
+  "label": "Tools Menu",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "This section provides detailed documentation on operating the Channel Manager interface, including feature overviews, user workflows, and step-by-step guidance.”"
+  }
+}
