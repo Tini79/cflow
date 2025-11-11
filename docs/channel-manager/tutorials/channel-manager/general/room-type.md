@@ -1,124 +1,126 @@
 ---
-title: Setup Room Types
-description: Guide for creating property and defining room types in Channel Manager
-sidebar_position: 4
+sidebar_position: 5
 ---
 
-# Setup Room Types
+# Room Type
 
-The **Room Types** menu allows users to manage room type data used by the Channel Manager (Channex). From this page, users can either create brand-new room types within the system or map existing PMS room types to the corresponding room types already registered in Channex.
+The **Room Type** menu is the center for managing room types that will be used as the basis for inventory management and distribution to various OTAs. Each room type created will automatically be available in the Inventory menu for availability and price management.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <div style={{marginBottom: '1.5rem'}}>
 <img
-			src="/img/cm/room-type/room-list.png"
-			alt="Room Type List"
-			style={{
-				borderRadius: "8px",
-				marginTop: "1rem",
-				boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-			}}
-/>
+      src="/img/cm/room-type/room-list.png"
+      alt="Room List"
+      style={{
+        borderRadius: "8px",
+        marginTop: "1rem",
+        boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+      }}
+    />
 </div>
 
-## Room Types Data Management
+## Why is Room Type Important?
+
+Room Type is the main foundation in channel management because:
+
+- **Inventory Base**: Every room type created will automatically appear in the Inventory menu
+- **OTA Mapping**: Facilitates room type mapping between PMS and various OTAs
+- **Data Consistency**: Ensures room names and categories are consistent across all channels
+- **Flexibility**: Data can be the same as PMS or differentiated as needed
+
+## Room Type Management
 
 <Tabs className="unique-tabs">
-	<TabItem value="create" label="Create" default>
-		To create new room type data:
+  <TabItem value="create" label="Create" default>
+    To create a new room type:
     
-		1. Click the **"+ Create"** button in the top right corner.
-		2. Fill the form with required PMS data.
-		3. **Fields with red labels are mandatory** - make sure nothing is missed.
-		4. Save, and data will automatically be available in the list and in the mapping menu.
+    1. Click the **"+ Create"** button in the top right corner.
+    2. Fill in the form with the required data.
+    3. **Fields with red labels are mandatory** - make sure nothing is missed.
+    4. Save, and the room type will automatically be available in Inventory.
     
-		<img
-			src="/img/cm/room-type/room-form.png"
-			alt="Room Type Form"
-			style={{
-				borderRadius: "8px",
-				marginTop: "1rem",
-				boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-			}}
-		/>
-        :::warning Required Fields
-        Make sure all fields with **red labels** are filled in correctly before saving the data.
-        :::
-	</TabItem>
-	<TabItem value="edit" label="Edit">
-		To edit existing data:
+    <img
+      src="/img/cm/room-type/room-form.png"
+      alt="Room Form"
+      style={{
+        borderRadius: "8px",
+        marginTop: "1rem",
+        boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+      }}
+    />
+    :::warning Mandatory Fields
+    Make sure all fields with **red labels** have been filled correctly before saving the room type.
+    :::
+  </TabItem>
+  <TabItem value="edit" label="Edit">
+    To edit an existing room type:
     
-		- Click the **Edit** button on the row you want to change.
-		- Update the data as needed (red fields are still required).
-		- Save changes, and the data will be updated in the mapping and related systems.
+    - Click the **Edit** button on the room type row you want to change.
+    - Change data as needed (red fields remain mandatory).
+    - Save changes, data will be updated in all related channels.
     
-		<img
-			src="/img/cm/room-type/room-edit.png"
-			alt="Room Type Edit"
-			style={{
-				borderRadius: "8px",
-				marginTop: "1rem",
-				boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-			}}
-		/>
-		:::info Auto-Update
-		Data changes will be automatically synchronized to the Mapping menu and connected systems.
-		:::
-	</TabItem>
-	<TabItem value="delete" label="Remove">
-		To delete data:
+    <img
+      src="/img/cm/room-type/room-edit.png"
+      alt="Room Edit"
+      style={{
+        borderRadius: "8px",
+        marginTop: "1rem",
+        boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+      }}
+    />
     
-		- Click the **Remove** button on the row you want to delete.
-		- Confirm deletion through the dialog that appears.
-		- Data will be deleted from the system and will no longer be available for mapping.
+    :::info Auto-Update
+    Room type changes will automatically sync to the Inventory menu and all connected channels.
+    :::
+  </TabItem>
+  <TabItem value="delete" label="Remove">
+    To delete a room type:
     
-		<img
-			src="/img/cm/room-type/room-remove.png"
-			alt="Room Type Remove"
-			style={{
-				borderRadius: "8px",
-				marginTop: "1rem",
-				boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-			}}
-		/>
-		:::danger Warning
-		Deleting data will remove all related mappings. Make sure there are no active bookings before deleting.
-		:::
-	</TabItem>
-	<TabItem value="deleteInternal" label="Remove Internal">
-		To delete data:
+    - Click the **Remove** button on the room type row to be deleted.
+    - Confirm deletion through the dialog that appears.
+    - Room type will be deleted from the system and no longer available in Inventory.
     
-		- Click the **Remove Internal** button on the row you want to delete.
-		- Confirm deletion through the dialog that appears.
-		- Deletes the room type only from CakraHub without affecting the existing room type in Channex.
+    <img
+      src="/img/cm/room-type/room-remove.png"
+      alt="Room Remove"
+      style={{
+        borderRadius: "8px",
+        marginTop: "1rem",
+        boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+      }}
+    />
     
-		<img
-			src="/img/cm/room-type/room-remove.png"
-			alt="Room Type Remove"
-			style={{
-				borderRadius: "8px",
-				marginTop: "1rem",
-				boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-			}}
-		/>
-	</TabItem>
+    :::danger Warning
+    Deleting a room type will delete all related inventory data. Make sure there are no active bookings before deleting.
+    :::
+  </TabItem>
 </Tabs>
 
-## Detail Form Input Data Rooms
+## Room Type Input Form Details
 
-### Required Fields (Red Label)
+### Mandatory Fields (Red Label)
 
-- **Room Type Code**: Unique PMS room type code `required`
-- **Room Type Name**: PMS room type name `required`
-- **Count of Rooms**: Number of rooms under this room type `required`
-- **Default Occupancy**: Standard occupancy capacity `required`
-- **Occ. Adults**: Maximum number of adults allowed
-- **Occ. Children**: Maximum number of children allowed
-- **Occ. Infant**: Maximum number of infants allowed
-- **Room Type Options**:
-  - **New Room Type**
-  Create a fully new room type in CakraHub and automatically register it in Channex. Use this when the room type does not yet exist in Channex.
-  - **Map Room Type**
-  Create a room type in CakraHub, then map it to an existing room type in Channex. When selected, the **OTA Room Type** dropdown will appear to select the matching Channex room.
+- **Room Type Code**: Unique code for internal identification `required`
+- **Room Type Name**: Room type name that will be displayed on OTA `required`
+- **Count of Rooms**: Number of rooms using that room type `required`
+- **Default Occupancy**: How many guests can stay in the room by default (without extra spaces). Keep in mind, this field can not be greater than `occ_adults` value. Typically this value is set equal to amount of adults. `required`
+- **Occupancy Adult**: How many Adult bed spaces have in this Room Type. `required`
+
+### Optional Fields
+
+- **Occupancy Children**: How many Child only bed spaces in this Room Type. Children can sleep in adult beds also. If no Child only beds then set this to 0.
+- **Occupancy Infant**: How many Infants cots available in this Room Type.
+
+## PMS Integration
+
+Room Type can:
+
+- **Sync with PMS**: Use the same name and data as your PMS
+- **Customized**: Create different names and categories for marketing needs
+- **Flexible Mapping**: One PMS room type can be mapped to multiple room types in the system
+
+:::tip Best Practice
+It is recommended to create room type names that are attractive and easy for guests to understand, even if different from internal codes in PMS.
+:::
