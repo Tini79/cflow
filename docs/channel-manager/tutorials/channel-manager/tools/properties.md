@@ -47,8 +47,9 @@ import TabItem from '@theme/TabItem';
 - **Address**: Maximum length of 255 symbols. 
 - **Min Stay Type**: To control simplified Min Stay restrictions. Can be useful for situation when your system support only one of Min Stay Types _(Arrival or Through)_.
 If your system work only with Min Stay **Arrival** or only with Min Stay **Through** you can setup that setting into arrival or through mode, as result we will simplify ARI updates and allow provide min stay changes under min_stay key and automatically setup correct selection for Min Stay type at Channel mappings. Possible values: **arrival**, **through**. default: **arrival** `required`
-- **OTA Property**: This select form has two functions. If the property is being created for the first time, you can select **New Property** in the radio button.
-If the property has already been created and you want to use the previous data, you can select **Map Property** in the radio button and select the property in the OTA Property select section. The property list will automatically appear. This is commonly used for Omni connections with PMS Cakra. 
+- **OTA Property**: This select form has two functions.
+	- **New Property**: If the property is being created for the first time.
+	- **Map Property**: If the property has already been created and you want to use the previous data. The property list will automatically appear. This is commonly used for Omni connections with PMS Cakra. 
 
 :::info edit form input
 

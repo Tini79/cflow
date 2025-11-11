@@ -6,24 +6,68 @@ sidebar_position: 3
 
 # Dashboard Overview
 
-Monitor your Channel Manager performance with comprehensive analytics and insights.
+Dashboard provides a comprehensive summary of booking performance, revenue trends, and OTA activity. It serves as the main analytics page where users can quickly monitor key metrics across daily, monthly, and yearly periods.
 
-## Key Metrics
+<div style={{marginBottom: '1.5rem'}}>
+<img
+			src="/img/cm/dashboard/dashboard-page.png"
+			alt="Dashboard Overview"
+			style={{
+				borderRadius: "8px",
+				marginTop: "1rem",
+				boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+			}}
+/>
+</div>
 
-[Content to be added - Important KPIs to track]
+## 1. Date Summary Panels
 
-## Performance Analytics
+At the top of the dashboard, users can view summary cards displaying:
+- `Today’s Bookings` – Total bookings received for the current day.
+- `Today’s Revenue` – Total revenue generated for the current day.
+- `Monthly Bookings` – Total bookings for the current month.
+- `Monthly Revenue` – Total revenue for the current month.
+- `Yearly Bookings` – Total bookings accumulated for the current year.
+- `Yearly Revenue` – Total revenue accumulated for the current year.
 
-[Content to be added - Revenue and occupancy analytics]
+## 2. Total Booking Visualization
 
-## Channel Performance
+A circular chart (donut chart) displays:
+- The total number of bookings within the selected period.
+- A visual representation indicating booking proportions.
 
-[Content to be added - Individual channel performance]
+This helps users quickly understand overall booking volume.
 
-## Reporting Tools
+## 3. Availability & Booking Indicators
 
-[Content to be added - Generating reports]
+Below the donut chart, the dashboard includes:
+- Booking Counter – Shows the current number of active bookings.
+- Availability Counter – Displays remaining available rooms or units.
 
-## Alerts and Notifications
+These indicators help monitor occupancy readiness and room availability.
 
-[Content to be added - System alerts and monitoring]
+## 4. Monthly Bookings Chart
+
+A line chart visualizes booking activity throughout the selected month.
+Features include:
+- Daily booking count represented as line points.
+- Helps identify trends, peaks, and low-activity periods.
+- Offers insights into occupancy flow across the month.
+
+## 5. Monthly Revenue Chart
+
+A similar line chart shows:
+- Daily revenue trends for the current month.
+- Visual tracking of revenue fluctuations.
+- Useful for spotting high-performing dates or periods.
+
+## 6. Bookings by OTA (Yearly)
+
+A multi-line yearly chart displays bookings grouped by OTA channels.
+
+## 7. Daily Bookings by OTA (Monthly)
+
+A separate chart shows:
+- Daily booking activity per OTA for the selected month.
+- Each OTA is displayed in its own line series.
+- Helps understand OTA performance on a day-by-day basis.
